@@ -1,0 +1,152 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    tools:context=".MainActivity" >
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="31dp"
+        android:text="Bluetooth is disabled"
+        android:textSize="20dp" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="40dp"
+        android:src="@drawable/bluetoothpic" />
+
+    <Button
+        android:id="@+id/connectBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/result"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="19dp"
+        android:minWidth="200dip"
+        android:onClick="connectBtnClicked"
+        android:text="Connect" />
+
+    <Button
+        android:id="@+id/disconnectBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/connectBtn"
+        android:layout_below="@+id/connectBtn"
+        android:minWidth="200dip"
+        android:onClick="disconnectBtnClicked"
+        android:text="Disconnect" />
+
+    <Button
+        android:id="@+id/listViewFirstUseBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="listViewFirstUseBtnClicked"
+        android:text="List Available Devices" />
+
+    <Button
+        android:id="@+id/listViewAfterFirstUseBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="listViewAfterFirstUseBtnClicked"
+        android:text="List Available Devices"
+        android:visibility="invisible" />
+
+    <ProgressBar
+        android:id="@+id/progressBar1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <Spinner
+        android:id="@+id/spinnerDevices"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/disconnectBtn"
+        android:layout_below="@+id/disconnectBtn" />
+
+    <Button
+        android:id="@+id/hostBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/spinnerDevices"
+        android:layout_marginTop="114dp"
+        android:text="Host" 
+        android:onClick="hostBtnOnClick"/>
+
+    <Button
+        android:id="@+id/clientBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/hostBtn"
+        android:layout_alignBottom="@+id/hostBtn"
+        android:layout_alignParentRight="true"
+        android:text="Client" 
+        android:onClick="clientBtnOnClick"/>
+
+    <EditText
+        android:id="@+id/writingEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/hostBtn"
+        android:ems="10"
+        android:hint="Writing" >
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/sendBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/hostBtn"
+        android:layout_alignBottom="@+id/hostBtn"
+        android:layout_marginLeft="35dp"
+        android:layout_toRightOf="@+id/hostBtn"
+        android:text="Send" 
+        android:onClick="sendBtnOnClick"/>
+
+    <TextView
+        android:id="@+id/ReadingTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/writingEditText"
+        android:layout_alignBottom="@+id/writingEditText"
+        android:layout_alignLeft="@+id/clientBtn"
+        android:text="Reading" />
+
+    <Button
+        android:id="@+id/importBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/sendBtn"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="33dp"
+        android:text="Import"
+        android:onClick="importBtnOnClick" />
+
+    <Button
+        android:id="@+id/sendImgBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/importBtn"
+        android:layout_alignLeft="@+id/sendBtn"
+        android:text="sendImageBtn" />
+
+</RelativeLayout>

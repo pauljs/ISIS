@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tvConfigInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Zephyr Bluetooth Connection" />
+
+    <Button
+        android:id="@+id/bwidgetOpen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tvConfigInput"
+        android:text="Connect" />
+
+    <TextView
+        android:id="@+id/heartRateTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvConfigInput"
+        android:layout_marginLeft="80dp"
+        android:layout_toRightOf="@+id/bwidgetOpen"
+        android:text="0" />
+
+    <TextView
+        android:id="@+id/heartRateLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/bwidgetOpen"
+        android:layout_toRightOf="@+id/bwidgetOpen"
+        android:text="Heart Rate:" />
+
+    <TextView
+        android:id="@+id/speedLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/bwidgetOpen"
+        android:layout_toRightOf="@+id/bwidgetOpen"
+        android:text="Speed:" />
+
+    <TextView
+        android:id="@+id/tvwidgetUpdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/bwidgetOpen"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/speedTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvwidgetUpdate"
+        android:layout_alignLeft="@+id/heartRateTextView"
+        android:text="0" />
+
+    <TextView
+        android:id="@+id/ReadingTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/bwidgetOpen"
+        android:text="" />
+
+</RelativeLayout>

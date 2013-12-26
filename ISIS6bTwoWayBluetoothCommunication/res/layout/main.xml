@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <Button
+        android:id="@+id/ButtonConnect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Welcometext"
+        android:text="Connect"
+        android:visibility="invisible" >
+    </Button>
+
+    <Button
+        android:id="@+id/ButtonDisconnect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/ButtonConnect"
+        android:layout_toRightOf="@id/ButtonConnect"
+        android:onClick="btnDisconnectOnClick"
+        android:text="Disconnect"
+        android:visibility="invisible" >
+    </Button>
+
+    <TextView
+        android:id="@+id/HRTextBox"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ButtonConnect"
+        android:text="Heart Rate"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/backToListViewBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:onClick="backToListViewBtnOnClick"
+        android:text="Back"
+        android:width="85dp" />
+
+    <TextView
+        android:id="@+id/Welcometext"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/backToListViewBtn"
+        android:text="@string/hello"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/keepScreenOnBtn"
+        android:layout_alignTop="@+id/keepScreenOnBtn"
+        android:layout_toRightOf="@+id/keepScreenOnBtn"
+        android:onClick="showGraph"
+        android:text="Timeseries" />
+
+    <Button
+        android:id="@+id/keepScreenOnBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/ButtonDisconnect"
+        android:layout_marginBottom="53dp"
+        android:onClick="keepScreenOnOffBtnOnClick"
+        android:text="Enable Screen\nWake" />
+
+    <TextView
+        android:id="@+id/labelStatusMsg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/StatusTextBox"
+        android:text="Connecting..."
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/labelHeartRate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/ButtonDisconnect"
+        android:text="0"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/labelInstantSpeed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/InstantSpeed"
+        android:text="0.0"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/StatusTextBox"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:text="Status Message"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/InstantSpeed"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/HRTextBox"
+        android:layout_marginTop="14dp"
+        android:text="Instant Speed"
+        android:textSize="20sp" />
+
+    <ProgressBar
+        android:id="@+id/connectingProgressBar"
+        style="?android:attr/progressBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/labelStatusMsg"
+        android:layout_toRightOf="@+id/labelStatusMsg" />
+
+    <Button
+        android:id="@+id/refreshConnectionBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/labelStatusMsg"
+        android:onClick="refreshConnectionBtnOnClick"
+        android:text="Refresh Connection" />
+
+</RelativeLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">ISIS6TwoWayBluetoothCommunication</string>
+    <string name="action_settings">Settings</string>
+    <string name="menu_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="hello">Welcome to the world of Zephyr HxM Apps !</string>
+    <string name="labelHeartRate">000</string>
+    <string name="labelStatusMsg"/>
+    <string name="title_activity_graphing">Pulse Time Series</string>
+    <string name="heart">&lt;3</string>
+
+</resources>

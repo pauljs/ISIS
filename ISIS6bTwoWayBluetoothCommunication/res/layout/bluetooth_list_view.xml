@@ -1,0 +1,49 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+    <TextView
+        android:id="@+id/tvPD"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       	android:layout_below= "@+id/backToBTConnectScrnBtn"
+        android:text="Devices: Click Zephyr Device to Connect.\nConnection May Take A Few Seconds." />
+    
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height= "wrap_content"
+        android:layout_below= "@+id/tvPD"
+        android:layout_above= "@+id/refreshListBtn" >
+    </ListView>
+    
+    <Button
+        android:id="@+id/refreshListBtn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:onClick="refreshListBtnClicked"
+        android:text="Refresh" >
+
+    </Button>
+
+    <Button
+        android:id="@+id/backToBTConnectScrnBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:onClick= "backToBTConnectScrnBtnClicked"
+        android:text="Back" />
+    <ProgressBar android:layout_height="wrap_content" 
+        android:layout_width="wrap_content" 
+        android:id="@+id/progressBar1" 
+        android:layout_alignParentBottom="true" 
+        android:layout_centerHorizontal="true" 
+        style="?android:attr/progressBarStyleLarge"
+     />
+
+</RelativeLayout>

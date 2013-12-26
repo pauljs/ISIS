@@ -1,0 +1,35 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GraphingActivity" >
+
+    <Spinner
+        android:id="@+id/timerange_spinner"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="top" />
+    
+   <com.androidplot.xy.XYPlot
+       android:id="@+id/xy_line_graph"
+       android:layout_width="fill_parent"
+       android:layout_height="500dp"
+       android:layout_below="@id/timerange_spinner"
+       android:layout_marginLeft="10dp"
+       android:layout_marginRight="10dp"
+       android:layout_marginTop="10dp"
+       title="Heart Rate v Time" />>
+    
+     <!-- 
+    <EditText 
+    android:id="@+id/labelHeartRate" 
+    android:layout_width="wrap_content" 
+    android:layout_height="wrap_content" 
+    android:text="000" 
+    android:layout_below="@+id/xy_line_graph" 
+    android:gravity="bottom">
+        
+    </EditText>
+     -->
+
+</RelativeLayout>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="edu.vu.isis.ammo.TwoWayBTCommunication"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="17" />
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+	<!-- <uses-permission android:name="android.permission.WAKE_LOCK" /> -->
+    
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="edu.vu.isis.ammo.TwoWayBTCommunication.MainActivity"
+            android:label="@string/app_name" 
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="edu.vu.isis.ammo.TwoWayBTCommunication.listViewBTDevices"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="edu.vu.isis.ammo.TwoWayBTCommunication.NewConnectedListener"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="edu.vu.isis.ammo.TwoWayBTCommunication.ZephyrMainActivity"
+            android:label="@string/app_name" 
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="edu.vu.isis.ammo.TwoWayBTCommunication.GraphingActivity"
+            android:label="@string/title_activity_graphing" 
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="edu.vu.isis.ammo.TwoWayBTCommunication.SettingsActivity"
+            android:label="@string/title_activity_settings" 
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="edu.vu.isis.ammo.TwoWayBTCommunication.bluetoothScanner"
+            android:label="@string/app_name" >
+        </activity>
+        
+        <activity 
+            android:name="edu.vu.isis.ammo.TwoWayBTCommunication.WidgetConfig" 
+            android:label="@string/app_name">
+            <intent-filter><action 
+                android:name="android.appwidget.action.APPWIDGET_CONFIGURE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity 
+            android:name="edu.vu.isis.ammo.TwoWayBTCommunication.Splash" 
+            android:label="@string/app_name"> 
+        </activity>
+        <activity 
+            android:name="edu.vu.isis.ammo.TwoWayBTCommunication.ZephyrSettings" 
+            android:label="@string/app_name"> 
+        </activity>
+        <activity 
+            android:name="edu.vu.isis.ammo.TwoWayBTCommunication.ScreenWakeToggleActivity" 
+            android:label="@string/app_name"> 
+        </activity>
+        <activity 
+            android:name="edu.vu.isis.ammo.TwoWayBTCommunication.UpdateWidgetHelper" 
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"> 
+        </activity>
+        
+        
+        <!-- Providers -->
+        <provider
+            android:name="edu.vu.isis.ammo.TwoWayBTCommunication.provider.SensordemoProvider"
+            android:authorities="edu.vu.isis.ammo.TwoWayBTCommunication.provider.sensordemoprovider" 
+            android:exported="true">
+        </provider>
+       
+        <!-- <receiver android:name=".ExampleAppWidgetProvider" >
+		    <intent-filter>
+		        <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+		    </intent-filter>
+   			 <meta-data android:name="android.appwidget.provider"
+               			 /> //android:resource="@xml/main" </receiver> -->
+		
+        
+        <receiver 
+            android:name="edu.vu.isis.ammo.TwoWayBTCommunication.PointlessWidget" 
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+            </intent-filter>
+            <meta-data 
+                android:name="android.appwidget.provider"
+                 android:resource="@xml/widget_stuff"/>
+            <intent-filter>
+				<action android:name="android.appwidget.action.APPWIDGET_ENABLED"/> 
+			</intent-filter>
+        </receiver>
+        
+     
+        
+        <service
+            android:name="edu.vu.isis.ammo.TwoWayBTCommunication.UpdateWidgetService"
+        />
+        
+    </application>
+
+</manifest>
